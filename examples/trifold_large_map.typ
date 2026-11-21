@@ -1,4 +1,4 @@
-#import "templates/typography/scifi_compact.typ": typography, clue, hint
+#import "/modules/typography/scifi_compact.typ": typography, clue, hint
 
 #show: typography
 

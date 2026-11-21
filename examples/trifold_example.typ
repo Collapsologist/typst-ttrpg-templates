@@ -1,6 +1,6 @@
-#import "templates/typography/scifi_compact.typ": typography, clue, hint
-#import "templates/trifold_helpers.typ": trifold, make_footer
-#import "templates/rpg_helpers.typ": make_roll_table
+#import "/modules/typography/scifi_compact.typ": typography, clue, hint
+#import "/modules/trifold.typ": trifold, make_footer
+#import "/modules/rpg_helpers.typ": make_roll_table
 
 
 #set page(
