@@ -3,14 +3,14 @@
   let row = 0
   let table_cells = {
     for value in values {
-      i = i + 1
       ([#i], value)
+      i = i + 1
     }.flatten()
   }
   table(
     columns: columns,
     table.header(
-      [d#(values.len() + 1)], header
+      [d#(values.len())], header
     ),
     table.hline(),
     ..table_cells,
