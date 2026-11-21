@@ -1,4 +1,5 @@
 #import "templates/typography/scifi_compact.typ": typography, clue, hint
+#import "templates/trifold_helpers.typ": trifold
 
 #show: typography
 
@@ -277,30 +278,4 @@
   )
 ]
 
-// Layout Setup
-
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  rows: (100%),
-  gutter: 4%,
-)[
-  #page2
-][
-  #page6
-][
-  #page1
-]
-
-#pagebreak()
-
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  rows: (1fr),
-  gutter: 4%,
-)[
-  #page3
-][
-  #page4
-][
-  #page5
-]
+#trifold((page1, page2, page3, page4, page5, page6))

@@ -7,11 +7,14 @@
 * See trifold.typ for examples of use.
 */
 
-#let heading_font = "Kelly Slab"
-#let body_font = "Liberation Mono"
-#let table_row_odd_color = rgb("D7D9E0")
 
-#let typography(doc) = [ 
+#let typography(
+  body_font: "Liberation Mono",
+  heading_font: "Kelly Slab",
+  title_font: "BBH Sans Bogle",
+  table_row_odd_color: rgb("D7D9E0"),
+  doc
+) = [
   #set text(
     font: body_font,
     size: 8pt,
@@ -62,6 +65,23 @@
     )
     #box[\- #it.body -]
   ]
+
+  #show title: it => {
+    set text(
+      size: 30pt,
+      font: title_font,
+      hyphenate: false,
+      tracking: 2pt,
+    )
+
+    set align(center)
+    set par(spacing: 0.4em)
+    if (it.body != none and it.body != auto) {
+      it.body
+    } else {
+      document.title
+    }
+  }
 
   #doc
 ]
