@@ -46,6 +46,11 @@
     ]
   ]
 
+  // Set the header styling
+  // HACK: Looks for row 0 instead of the header.
+  // https://github.com/typst/typst/issues/3640
+  #show table.cell.where(y: 0): strong
+
   #show heading.where(level: 2): it => [
     #set text(
       size: 12pt,
