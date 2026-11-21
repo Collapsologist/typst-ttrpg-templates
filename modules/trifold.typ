@@ -1,21 +1,3 @@
-#let make_credits(author, credits, logo) = {
-  line(length: 100%)
-  grid(
-    columns: (1fr, 8fr),
-    rows: 1,
-    gutter: 8pt,
-    align: left+horizon,
-  )[
-    #rect[#logo]
-  ][
-    #set text(style: "italic", size: 6pt)
-
-    #credits
-
-    Author: #author
-  ]
-}
-
 #let make_footer(footer) = {
   place(
     bottom,
