@@ -12,15 +12,18 @@ give the repository a star if you'd like.
 
 ## Contained Within
 
-See the [samples](./samples) folder for a quick taste.
+Take a look at the [examples/out](./examples/out) folder to see how
+the end results look.
 
 ### Layouts
 
 1. Two sample trifold pamphlet layouts with typographic examples and tables.
 
-### Typographic settings
+### Modules
 
-1. [sci-fi compact](./adventures/templates/typography/scifi_compact.typ)
+1. [Typographic utilities](./modules/typography/)
+1. [Trifold building blocks](./modules/trifold.typ)
+1. [RPG helpers](./modules/rpg.typ)
 
 ## Who is this for?
 
@@ -82,19 +85,15 @@ of things you don't like.
 1. Compile using `typst compile <filename>` which will render the file in PDF
 format in the same directory as the Typst file, OR will return some errors.
 
-#### More sophisticated example
-
-This command was used to render the images in the samples folder.
-
-`typst compile --format png adventures/trifold_large_map.typ
-samples/trifold_large_map_{p}.png`
+Examples of more elaborate build commands can be seen in
+the `justfile` file. That's how the sample documents are made!
 
 ### Changing the look of your adventure
 
 Some of the examples start with:
 
 ```
-#import "templates/typography/scifi_compact.typ": typography, clue, hint
+#import "/modules/typography/scifi_compact.typ": typography, clue, hint
 
 #show: typography
 ```
