@@ -10,7 +10,7 @@
 
 #set page(
   paper: "a4",
-  flipped:  true,
+  flipped: true,
   margin: (x: 2%, y: 4%),
 )
 
