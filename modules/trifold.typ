@@ -24,13 +24,10 @@
     columns: columns,
     rows: rows,
     gutter: gutter,
-  )[
-    #pages.at(1)
-  ][
-    #pages.at(5)
-  ][
-    #pages.at(0)
-  ]
+    pages.at(1),
+    pages.at(5),
+    pages.at(0),
+  )
 
   pagebreak()
 
@@ -38,11 +35,6 @@
     columns: columns,
     rows: rows,
     gutter: gutter,
-  )[
-    #pages.at(2)
-  ][
-    #pages.at(3)
-  ][
-    #pages.at(4)
-  ]
+    ..pages.slice(2, 5),
+  )
 }
